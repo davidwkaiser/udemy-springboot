@@ -2,7 +2,7 @@ Repository for a [Udemy course for learning Spring Boot][1].  </br>
 
 This is a great course, I wish I had taken it about eight months ago. </br>
 
-Tech stack: Java, Spring, Thymeleaf, JPA </br>
+Tech stack: Java, Spring, Thymeleaf, H2, JPA </br>
 
 I am a Developer at Blue Cross Blue Shield of Illinois, working mostly in Java with some Kotlin, Javascript, and Concourse. 
 
