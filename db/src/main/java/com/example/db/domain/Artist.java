@@ -1,5 +1,7 @@
 package com.example.db.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,6 +16,7 @@ public class Artist {
     private long id;
     private String name;
     private int age;
+    @JsonManagedReference
     @OneToMany(mappedBy = "artist")
     private List<Song> songs;
 

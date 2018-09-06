@@ -1,5 +1,7 @@
 package com.example.db.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,6 +14,7 @@ public class Song {
     @GeneratedValue
     private long id;
     private String name;
+    @JsonBackReference
     @ManyToOne
     private Artist artist;
 
