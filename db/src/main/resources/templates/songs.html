@@ -5,10 +5,10 @@
     <title>Songs</title>
 </head>
 <body>
-    <div th:each="song : ${songs}" >
+    <div th:each="song : ${allSongs}" >
         <p>****</p>
-        <p th:text="'title: '+${song.name}"></p>
-        <p th:text="'artist: '+${song.artist}"></p>
+        <p th:text="${song.name}"></p>
+        <p th:text="${song.artist.name}"></p>
         <p>****</p>
     </div>
 </body>
