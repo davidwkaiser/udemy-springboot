@@ -20,10 +20,6 @@ public class SongService {
     public Iterable<Song> findAll(){
 
         Iterable<Song> songs = songRepository.findAll();
-//        System.out.print("SERVICE!!!!!!");
-//        for (Song song : songs) {
-//            System.out.print(song);
-//        }
         return songs;
     };
 

@@ -15,17 +15,6 @@ public class SongController {
     @Autowired
     SongService songService;
 
-//    @RequestMapping("/songs")
-//    public Iterable<Song> returnSongs(){
-//
-//        Iterable<Song> songs = songService.findAll();
-//        System.out.print("CONTROLLER!!!!!!");
-//        for (Song song : songs) {
-//            System.out.print(song);
-//        }
-//        return songs;
-//    }
-
     @RequestMapping("/songs")
     public String returnSongs(Model model){
         Iterable<Song> songs = songService.findAll();
