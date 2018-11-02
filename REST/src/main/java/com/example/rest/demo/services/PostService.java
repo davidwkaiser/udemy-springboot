@@ -5,6 +5,8 @@ import com.example.rest.demo.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class PostService {
 
@@ -15,7 +17,15 @@ public class PostService {
         this.postRepository = postRepository;
     }
 
-    public Iterable<Post> getPosts() {
+    public Iterable<Post> list() {
         return postRepository.findAll();
+    }
+
+    public Optional<Post> read(Long id){
+        return postRepository.findById(id);
+    }
+
+    public void delete(Long id) {
+        postRepository.deleteById(id);
     }
 }
