@@ -21,6 +21,10 @@ public class PostService {
         return postRepository.findAll();
     }
 
+    public Post create(Post post) {
+        return postRepository.save(post);
+    }
+
     public Optional<Post> read(Long id){
         return postRepository.findById(id);
     }

@@ -22,6 +22,11 @@ public class PostController {
         return postService.list();
     }
 
+    @PostMapping("/posts")
+    public Post create(@RequestBody Post post){
+        return postService.create(post);
+    }
+    
     @RequestMapping("/posts/{id}")
     public Post read(@PathVariable(value="id") Long id){
         Optional<Post> response = postService.read(id);
